@@ -151,10 +151,10 @@ FROM
 	Employees
 	JOIN Orders
 		ON Employees.EmployeeID = Orders.EmployeeID
-		JOIN [Order Details] 
-			ON Orders.OrderID = [Order Details].OrderID
-		JOIN Products
-			ON [Order Details].ProductID = Products.ProductID
+	JOIN [Order Details] 
+		ON Orders.OrderID = [Order Details].OrderID
+	JOIN Products
+		ON [Order Details].ProductID = Products.ProductID
 ORDER BY
 	Orders.OrderID,
 	Products.ProductID
